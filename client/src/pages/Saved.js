@@ -18,11 +18,15 @@ class Saved extends Component {
     API.getSavedBooks()
       .then(res => this.setState({ result: res.data }))
       .catch(err => console.log(err));
-    console.log(this.state.result);
+  };
+
+  deleteBook = data => {
+    console.log(data);
+    // API.deleteBook(id);
   };
 
   componentDidUpdate() {
-    console.log(this.state.result);
+    console.log(this.state.result[0]._id);
   }
 
   render() {
@@ -42,7 +46,8 @@ class Saved extends Component {
                   ? result.authors.map(author => author + " ")
                   : "Unknown"
               }
-              saveBook={this.saveBook}
+              deleteBook={this.deleteBook}
+              id={result._id}
             />
           ))}
         </BookResults>

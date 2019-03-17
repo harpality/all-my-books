@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Book = props => {
   return (
@@ -21,9 +22,13 @@ const Book = props => {
         >
           View
         </a>
-        <a className="waves-effect waves-light btn" onClick={props.saveBook}>
-          Save
-        </a>
+        {!props.saveBook ? (
+          <Button id={props.id} onClick={props.deleteBook}>
+            Delete
+          </Button>
+        ) : (
+          <Button onClick={props.saveBook}>Save</Button>
+        )}
       </div>
     </div>
   );
