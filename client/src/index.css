@@ -28,6 +28,8 @@ nav {
   margin-top: 2rem;
   color: #fff;
   padding-bottom: 2rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .title h1 {
@@ -46,6 +48,8 @@ nav {
   margin-top: 2rem;
   align-items: center;
   height: 13rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .search-form input {
@@ -91,11 +95,13 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .book-results h5 {
   margin-left: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   align-self: flex-start;
 }
 
@@ -107,6 +113,8 @@ input:focus {
   width: 90%;
   padding: 1rem;
   object-fit: contain;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .no-results {
@@ -122,6 +130,8 @@ img {
   object-fit: contain;
   align-self: flex-start;
   max-height: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .book-title {
