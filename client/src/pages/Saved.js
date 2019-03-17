@@ -20,9 +20,11 @@ class Saved extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteBook = data => {
-    console.log(data);
-    // API.deleteBook(id);
+  deleteBook = id => {
+    console.log(id);
+    API.deleteBook(id)
+      .then(res => this.loadBooks())
+      .catch(err => console.log(err));
   };
 
   componentDidUpdate() {
