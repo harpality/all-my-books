@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: "Ubuntu", sans-serif;
   background-color: #bcd5d1;
+  box-sizing: border-box;
 }
 
 .nav-wrapper li {

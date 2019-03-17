@@ -3,7 +3,7 @@ import React from "react";
 const BookResults = props => {
   return (
     <div className="book-results">
-      <h5>Results</h5>
+      <h5>{props.title}</h5>
       {props.children}
     </div>
   );
