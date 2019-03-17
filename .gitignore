@@ -1,4 +1,4 @@
 node_modules
 .DS_Store
 client/.DS_Store
-.env
+client/src/config_keys.js
