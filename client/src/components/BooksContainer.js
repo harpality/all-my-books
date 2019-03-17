@@ -44,9 +44,23 @@ class BooksContainer extends Component {
           handleFormSubmit={this.handleFormSubmit}
         />
         <BookResults>
-          {this.state.result.map(result => (
-            <Book key={result.id} title={result.volumeInfo.title} />
-          ))}
+          {this.state.result ? (
+            this.state.result.map(result => (
+              <Book
+                key={result.id}
+                thumbnail={result.volumeInfo.imageLinks.thumbnail}
+                title={result.volumeInfo.title}
+                description={result.volumeInfo.description}
+                authors={
+                  result.volumeInfo.authors
+                    ? result.volumeInfo.authors.map(author => author + " ")
+                    : "Unknown"
+                }
+              />
+            ))
+          ) : (
+            <h2 className="no-results">No results!</h2>
+          )}
         </BookResults>
       </div>
     );

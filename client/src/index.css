@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Ubuntu", sans-serif;
   background-color: #bcd5d1;
 }
 
@@ -48,6 +50,14 @@ nav {
 
 .search-form input {
   color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+
+input:focus {
+  border-bottom: 1px solid #5a5c51 !important;
+  -webkit-box-shadow: 0 1px 0 0 red !important;
+  -moz-box-shadow: 0 1px 0 0 red !important;
+  box-shadow: 0 2px 0 0 #5a5c51 !important;
 }
 
 .search-form h5 {
@@ -67,6 +77,7 @@ nav {
 
 .book-results {
   background-color: #1d2120;
+  margin-top: 2rem;
   color: white;
   min-height: 10rem;
   display: flex;
@@ -76,5 +87,39 @@ nav {
 
 .book-results h5 {
   margin-left: 2rem;
+  margin-bottom: 1rem;
   align-self: flex-start;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  background-color: #5a5c51;
+  margin-bottom: 1rem;
+  width: 90%;
+  padding: 1rem;
+  object-fit: contain;
+}
+
+.no-results {
+  align-self: center;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  object-fit: contain;
+  align-self: flex-start;
+  max-height: 100%;
+}
+
+.book-title {
+  margin-bottom: 0.5rem;
+}
+.book-text {
+  flex: 1 1 auto;
+  margin-left: 1rem;
 }
