@@ -22,6 +22,19 @@ class BooksContainer extends Component {
     this.setState({ search: "" });
   };
 
+  saveBook = event => {
+    event.preventDefault();
+    const target = event.target.parentNode.parentNode;
+    API.saveBook({
+      title: target.querySelector("h6").textContent,
+      authors: target.querySelector(".book-authors").textContent,
+      description: target.querySelector(".book-text").textContent,
+      image: target.querySelector("img").src,
+      link: target.querySelector("a").href
+    }).then(res => console.log(res));
+    // console.log(book);
+  };
+
   handleInputChange = event => {
     const value = event.target.value;
     const name = event.target.name;
@@ -62,6 +75,7 @@ class BooksContainer extends Component {
                     ? result.volumeInfo.authors.map(author => author + " ")
                     : "Unknown"
                 }
+                saveBook={this.saveBook}
               />
             ))
           ) : (

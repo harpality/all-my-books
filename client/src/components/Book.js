@@ -4,7 +4,7 @@ const Book = props => {
   return (
     <div className="book">
       <h6 className="book-title">{props.title}</h6>
-      <span className="book-authors">by {props.authors}</span>
+      <span className="book-authors">{props.authors}</span>
       <div className="book-details">
         {props.thumbnail ? (
           <img className="book-img" src={props.thumbnail} alt="" />
@@ -21,7 +21,9 @@ const Book = props => {
         >
           View
         </a>
-        <a className="waves-effect waves-light btn">Save</a>
+        <a className="waves-effect waves-light btn" onClick={props.saveBook}>
+          Save
+        </a>
       </div>
     </div>
   );
