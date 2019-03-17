@@ -7,7 +7,8 @@ import Book from "./Book";
 class BooksContainer extends Component {
   state = {
     result: [],
-    search: ""
+    search: "",
+    resultTitle: "Results"
   };
 
   componentDidUpdate() {
@@ -43,7 +44,7 @@ class BooksContainer extends Component {
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <BookResults>
+        <BookResults title={this.state.resultTitle}>
           {this.state.result ? (
             this.state.result.map(result => (
               <Book
