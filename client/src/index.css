@@ -71,6 +71,14 @@ input:focus {
   background-color: #ba9077;
 }
 
+.btn:hover {
+  background-color: #ddac90;
+}
+
+.btn:visited {
+  background-color: #ba9077;
+}
+
 .input-field {
   width: 80%;
 }
@@ -117,9 +125,19 @@ img {
 }
 
 .book-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 .book-text {
   flex: 1 1 auto;
   margin-left: 1rem;
+}
+
+.book-authors {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.book-btn {
+  margin-top: 0.5rem;
+  align-self: flex-end;
 }

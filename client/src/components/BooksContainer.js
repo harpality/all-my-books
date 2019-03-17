@@ -50,6 +50,7 @@ class BooksContainer extends Component {
                 key={result.id}
                 thumbnail={result.volumeInfo.imageLinks.thumbnail}
                 title={result.volumeInfo.title}
+                link={result.volumeInfo.infoLink}
                 description={result.volumeInfo.description}
                 authors={
                   result.volumeInfo.authors
