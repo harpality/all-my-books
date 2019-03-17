@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "book search and save full-stack app",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:8080/",
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^7.0.0",

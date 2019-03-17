@@ -48,9 +48,13 @@ class BooksContainer extends Component {
             this.state.result.map(result => (
               <Book
                 key={result.id}
-                thumbnail={result.volumeInfo.imageLinks.thumbnail}
                 title={result.volumeInfo.title}
                 link={result.volumeInfo.infoLink}
+                thumbnail={
+                  result.volumeInfo.imageLinks
+                    ? result.volumeInfo.imageLinks.thumbnail
+                    : {}
+                }
                 description={result.volumeInfo.description}
                 authors={
                   result.volumeInfo.authors
