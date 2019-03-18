@@ -256,7 +256,12 @@ img:hover {
 
   .book-btn {
     align-self: center;
-    /* margin-right: 0; */
     margin-left: 2rem;
+  }
+
+  .nav-wrapper .title {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    font-family: "Inconsolata", monospace;
   }
 }
