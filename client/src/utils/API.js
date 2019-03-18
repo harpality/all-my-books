@@ -1,8 +1,7 @@
 import axios from "axios";
-import REACT_APP_GOOGLE_BOOKS from "../config_keys";
 
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
-const APIKEY = `&key=${REACT_APP_GOOGLE_BOOKS}`;
+const APIKEY = `&key=${process.env.REACT_APP_GOOGLE_BOOKS}`;
 
 export default {
   // gets books from google books api

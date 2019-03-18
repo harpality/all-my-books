@@ -8,7 +8,8 @@ class BooksContainer extends Component {
   state = {
     result: [],
     search: "",
-    resultTitle: "Results"
+    resultTitle: "Results",
+    saved: false
   };
 
   componentDidUpdate() {
