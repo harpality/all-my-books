@@ -33,7 +33,6 @@ class BooksContainer extends Component {
       link: target.querySelector("a").href,
       saved: true
     }).then(res => console.log(res));
-    // console.log(book);
   };
 
   handleInputChange = event => {
@@ -47,7 +46,6 @@ class BooksContainer extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchBooks(this.state.search);
-    // console.log(this.state.search);
   };
 
   render() {
