@@ -76,12 +76,20 @@ input:focus {
   background-color: #ba9077;
 }
 
+.btn:visited {
+  background-color: #ba9077;
+}
+
 .btn:hover {
   background-color: #ddac90;
 }
 
-.btn:visited {
-  background-color: #ba9077;
+.btn:active {
+  background-color: red;
+}
+
+.btn:focus {
+  background-color: #ddac90;
 }
 
 .input-field {

@@ -8,8 +8,7 @@ class BooksContainer extends Component {
   state = {
     result: [],
     search: "",
-    resultTitle: "Results",
-    saved: false
+    resultTitle: "Results"
   };
 
   componentDidUpdate() {
@@ -31,7 +30,8 @@ class BooksContainer extends Component {
       authors: target.querySelector(".book-authors").textContent,
       description: target.querySelector(".book-text").textContent,
       image: target.querySelector("img").src,
-      link: target.querySelector("a").href
+      link: target.querySelector("a").href,
+      saved: true
     }).then(res => console.log(res));
     // console.log(book);
   };

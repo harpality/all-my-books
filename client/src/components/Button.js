@@ -1,20 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Button = props => {
   if (props.children === "Save") {
     return (
-      <a className="waves-effect waves-light btn" onClick={props.onClick}>
+      <button className="waves-effect waves-light btn" onClick={props.onClick}>
         {props.children}
-      </a>
+      </button>
     );
   } else {
     return (
-      <a
+      <button
         className="waves-effect waves-light btn"
         onClick={() => props.onClick(props.id)}
       >
         {props.children}
-      </a>
+      </button>
     );
   }
 };

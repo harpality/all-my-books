@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav>
       <div className="nav-wrapper">
-        <a href="#" className="title">
+        <span href="#" className="title">
           Google Books
-        </a>
+        </span>
         <ul className="right">
           <li>
             <Link to="/search">Search</Link>

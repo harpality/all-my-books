@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 
 const Book = props => {
+  console.log(props);
   return (
     <div className="book">
       <h6 className="book-title">{props.title}</h6>
@@ -19,6 +20,7 @@ const Book = props => {
           href={props.link}
           className="waves-effect waves-light btn"
           target="_blank"
+          rel="noopener noreferrer"
         >
           View
         </a>

@@ -42,6 +42,7 @@ class Saved extends Component {
                 link={result.link}
                 thumbnail={result.image}
                 description={result.description}
+                saved={result.saved}
                 authors={
                   result.authors
                     ? result.authors.map(author => author + " ")
