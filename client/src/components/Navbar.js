@@ -6,9 +6,9 @@ const Navbar = () => {
     <div className="navbar-fixed">
       <nav>
         <div className="nav-wrapper">
-          <span href="#" className="title">
+          <Link to="/" className="title">
             ALL MY BOOKS
-          </span>
+          </Link>
           <ul className="right">
             <li>
               <Link to="/search">Search</Link>

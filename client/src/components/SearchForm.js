@@ -3,7 +3,7 @@ import React from "react";
 const SearchForm = props => {
   return (
     <form>
-      <div className="search-form">
+      <section className="search-form">
         <h5>Book Search</h5>
         <div className="input-field">
           <input
@@ -22,7 +22,7 @@ const SearchForm = props => {
         >
           Search
         </button>
-      </div>
+      </section>
     </form>
   );
 };

@@ -66,7 +66,7 @@ class BooksContainer extends Component {
                 thumbnail={
                   result.volumeInfo.imageLinks
                     ? result.volumeInfo.imageLinks.thumbnail
-                    : {}
+                    : null
                 }
                 description={result.volumeInfo.description}
                 authors={

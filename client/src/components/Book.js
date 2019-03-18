@@ -9,9 +9,13 @@ const Book = props => {
       <span className="book-authors">{props.authors}</span>
       <div className="book-details">
         {props.thumbnail ? (
-          <img className="book-img" src={props.thumbnail} alt="" />
+          <img className="book-img" src={props.thumbnail} alt={props.title} />
         ) : (
-          <span />
+          <img
+            className="book-img"
+            src="https://books.google.com/googlebooks/images/no_cover_thumb.gif"
+            alt="no-thumbnail"
+          />
         )}{" "}
         {props.description ? (
           <span className="book-text">{props.description}</span>

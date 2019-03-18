@@ -11,11 +11,11 @@ class App extends Component {
       <Router>
         <div className="wrapper">
           <Navbar />
-          <div className="container">
+          <main className="container">
             <Route exact path="/" component={Search} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
-          </div>
+          </main>
           <Footer />
         </div>
       </Router>

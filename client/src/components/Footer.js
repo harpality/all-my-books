@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      Powered by React, MongoDB, Express, Node.js & Google Books API.
+      Powered by React, Express, MongoDB, Node.js & Google Books API.
     </footer>
   );
 };
