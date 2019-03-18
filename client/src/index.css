@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Inconsolata");
 
 .wrapper {
   display: flex;
@@ -27,7 +27,7 @@ footer {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inconsolata", monospace;
   background-color: #bcd5d1;
   box-sizing: border-box;
 }
@@ -39,7 +39,7 @@ body {
 .nav-wrapper .title {
   margin-left: 1rem;
   font-size: 2rem;
-  letter-spacing: 0.5rem;
+  font-family: "Inconsolata", monospace;
 }
 
 nav {
@@ -61,11 +61,13 @@ nav {
 
 .title h1 {
   font-size: 2rem;
-  letter-spacing: 0.5rem;
+  font-family: "Inconsolata", monospace;
 }
 
 .title h4 {
   font-size: 1.25rem;
+  font-family: "Inconsolata", monospace;
+  font-style: italic;
 }
 
 .search-form {
@@ -83,7 +85,7 @@ nav {
 
 .search-form input {
   color: white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inconsolata", monospace;
 }
 
 input:focus {
@@ -108,6 +110,7 @@ input:focus {
   border-radius: 1rem;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Inconsolata", monospace;
 }
 
 .btn:visited {
@@ -124,7 +127,7 @@ input:focus {
 }
 
 .btn:focus {
-  background-color: #1d2120;
+  background-color: #262b2a;
   color: white;
 }
 
