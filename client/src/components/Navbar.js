@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav>
         <div className="nav-wrapper">
           <span href="#" className="title">
-            All My Books
+            ALL MY BOOKS
           </span>
           <ul className="right">
             <li>
