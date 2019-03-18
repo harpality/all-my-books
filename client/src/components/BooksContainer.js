@@ -71,7 +71,7 @@ class BooksContainer extends Component {
                 description={result.volumeInfo.description}
                 authors={
                   result.volumeInfo.authors
-                    ? result.volumeInfo.authors.map(author => author + " ")
+                    ? result.volumeInfo.authors.map(author => author + ". ")
                     : "Unknown"
                 }
                 saveBook={this.saveBook}
