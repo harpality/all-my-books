@@ -120,6 +120,7 @@ input:focus {
 
 .no-results {
   align-self: center;
+  margin-bottom: 5rem;
 }
 
 .book-details {

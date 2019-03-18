@@ -80,7 +80,7 @@ class BooksContainer extends Component {
               />
             ))
           ) : (
-            <h2 className="no-results">No results!</h2>
+            <h3 className="no-results">No results!</h3>
           )}
         </BookResults>
       </div>

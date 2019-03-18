@@ -27,31 +27,33 @@ class Saved extends Component {
       .catch(err => console.log(err));
   };
 
-  componentDidUpdate() {
-    console.log(this.state.result[0]._id);
-  }
+  componentDidUpdate() {}
 
   render() {
     return (
       <div>
         <Header />
         <BookResults title={this.state.resultTitle}>
-          {this.state.result.map(result => (
-            <Book
-              key={result._id}
-              title={result.title}
-              link={result.link}
-              thumbnail={result.image}
-              description={result.description}
-              authors={
-                result.authors
-                  ? result.authors.map(author => author + " ")
-                  : "Unknown"
-              }
-              deleteBook={this.deleteBook}
-              id={result._id}
-            />
-          ))}
+          {this.state.result[0] ? (
+            this.state.result.map(result => (
+              <Book
+                key={result._id}
+                title={result.title}
+                link={result.link}
+                thumbnail={result.image}
+                description={result.description}
+                authors={
+                  result.authors
+                    ? result.authors.map(author => author + " ")
+                    : "Unknown"
+                }
+                deleteBook={this.deleteBook}
+                id={result._id}
+              />
+            ))
+          ) : (
+            <h3 className="no-results">Nothing saved yet!</h3>
+          )}
         </BookResults>
       </div>
     );
