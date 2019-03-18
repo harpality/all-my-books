@@ -1,6 +1,9 @@
 {
   "name": "google-books-search",
   "version": "0.1.0",
+  "engines": {
+    "node": "10.13.0"
+  },
   "description": "book search and save full-stack app",
   "private": true,
   "proxy": "http://localhost:3001/",
