@@ -201,6 +201,7 @@ img:hover {
 }
 .book-title {
   margin-bottom: 0rem;
+  text-decoration: underline;
 }
 .book-text {
   flex: 1 1 auto;
