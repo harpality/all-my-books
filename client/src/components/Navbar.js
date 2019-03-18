@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav>
         <div className="nav-wrapper">
           <span href="#" className="title">
-            Google Books
+            All My Books
           </span>
           <ul className="right">
             <li>

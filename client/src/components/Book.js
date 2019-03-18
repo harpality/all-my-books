@@ -12,8 +12,12 @@ const Book = props => {
           <img className="book-img" src={props.thumbnail} alt="" />
         ) : (
           <span />
+        )}{" "}
+        {props.description ? (
+          <span className="book-text">{props.description}</span>
+        ) : (
+          <span className="book-text">No description provided.</span>
         )}
-        <span className="book-text">{props.description}</span>
       </div>
       <div className="book-btn">
         <a

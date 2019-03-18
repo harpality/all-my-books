@@ -3,14 +3,14 @@ import React from "react";
 const Button = props => {
   if (props.children === "Save") {
     return (
-      <button className="waves-effect waves-light btn" onClick={props.onClick}>
+      <button className="waves-effect waves-red btn" onClick={props.onClick}>
         {props.children}
       </button>
     );
   } else {
     return (
       <button
-        className="waves-effect waves-light btn"
+        className="waves-effect waves-red btn"
         onClick={() => props.onClick(props.id)}
       >
         {props.children}

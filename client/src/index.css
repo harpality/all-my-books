@@ -8,6 +8,8 @@
 
 .container {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -97,23 +99,28 @@ input:focus {
 .btn {
   align-self: flex-end;
   margin-right: 2rem;
-  background-color: #ba9077;
+  background-color: #bcd5d1;
+  color: black;
+  font-weight: 600;
+  border-radius: 1rem;
 }
 
 .btn:visited {
-  background-color: #ba9077;
+  background-color: #bcd5d1;
 }
 
 .btn:hover {
-  background-color: #ddac90;
+  background-color: #bcd5d1;
+  top: 2px;
 }
 
 .btn:active {
-  background-color: red;
+  background-color: bcd5d1;
 }
 
 .btn:focus {
-  background-color: #ddac90;
+  background-color: black;
+  color: white;
 }
 
 .input-field {
@@ -162,6 +169,7 @@ input:focus {
 .book-details {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 img {
@@ -179,6 +187,11 @@ img {
 .book-text {
   flex: 1 1 auto;
   margin-left: 1rem;
+  background-color: #1d2120;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .book-authors {
@@ -187,6 +200,6 @@ img {
 }
 
 .book-btn {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   align-self: flex-end;
 }
