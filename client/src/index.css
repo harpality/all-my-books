@@ -227,3 +227,35 @@ img:hover {
   margin-top: 1rem;
   align-self: flex-end;
 }
+
+@media screen and (max-width: 600px) {
+  .book-details {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  img {
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .book-text {
+    margin-left: 0;
+    font-size: 1.25rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .no-results {
+    font-size: 1.33rem;
+  }
+
+  .book-btn {
+    align-self: center;
+    /* margin-right: 0; */
+    margin-left: 2rem;
+  }
+}
