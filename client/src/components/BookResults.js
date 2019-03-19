@@ -1,5 +1,7 @@
 import React from "react";
 
+// results div to hold books
+
 const BookResults = props => {
   return (
     <section className="book-results">

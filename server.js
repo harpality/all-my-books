@@ -4,18 +4,19 @@ const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Define middleware here
+// middleware for parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+
+// enable static assets from build for deployment
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Define API routes here
+// routes to be used in routes folder
 app.use(routes);
 
-// connect to MongoDB
+// connect to MongoDB via mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
 // start server

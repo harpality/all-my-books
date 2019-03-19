@@ -4,6 +4,8 @@ import API from "../utils/API";
 import BookResults from "./BookResults";
 import Book from "./Book";
 
+// contains the logic for the search field and API calls for GET/POST
+
 class BooksContainer extends Component {
   state = {
     result: [],

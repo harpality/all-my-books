@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "./Button";
 
+// Book component which displays each book and its details
+
 const Book = props => {
   console.log(props);
   return (
