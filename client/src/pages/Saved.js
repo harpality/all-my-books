@@ -45,7 +45,7 @@ class Saved extends Component {
                 saved={result.saved}
                 authors={
                   result.authors
-                    ? result.authors.map(author => author + ". ")
+                    ? result.authors.map(author => author + " ")
                     : "Unknown"
                 }
                 deleteBook={this.deleteBook}
