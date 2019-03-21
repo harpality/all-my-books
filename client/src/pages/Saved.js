@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import Header from "../components/Header";
-import BookResults from "../components/BookResults";
-import Book from "../components/Book";
-import API from "../utils/API";
+import React, { Component } from 'react';
+import Header from '../components/Header';
+import BookResults from '../components/BookResults';
+import Book from '../components/Book';
+import API from '../utils/API';
 
 class Saved extends Component {
   state = {
-    resultTitle: "Saved Books",
+    resultTitle: 'Saved Books',
     result: []
   };
 
@@ -16,7 +16,12 @@ class Saved extends Component {
 
   loadBooks = () => {
     API.getSavedBooks()
-      .then(res => this.setState({ result: res.data }))
+      .then(res =>
+        this.setState({
+          result: res.data,
+          resultTitle: `Saved Books (${res.data.length})`
+        })
+      )
       .catch(err => console.log(err));
   };
 
@@ -45,8 +50,8 @@ class Saved extends Component {
                 saved={result.saved}
                 authors={
                   result.authors
-                    ? result.authors.map(author => author + " ")
-                    : "Unknown"
+                    ? result.authors.map(author => author + ' ')
+                    : 'Unknown'
                 }
                 deleteBook={this.deleteBook}
                 id={result._id}
