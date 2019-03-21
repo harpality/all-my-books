@@ -1,6 +1,6 @@
 # All My Books 📚
 
-_All My Books_ is a full-stack application that searches and saves books of interest using the Google Books API. The app is built with React, MongoDB, Express and Node.js.
+_All My Books_ is a full-stack application that searches, saves, and deletes books of interest using the Google Books API. The app is built with React, MongoDB, Express and Node.js.
 
 ![Screenshot](screenshot.png)
 
@@ -18,7 +18,7 @@ To connect to the server, type `yarn start` or `npm start`. Open your favorite b
 
 ## Functionality
 
-This app uses React to contact the Google Books API and render the user's search query to the page. This will dynamically display a list of books with their title, authors, thumbnail image, and description. The user will have the option to save a book. If saved, the book is sent to a MongoDB database. When the user navigates to the "saved" page, they will be able to view all of their books loaded via `express` and `mongoose.` The user can delete a book if the no longer wish to save it.
+This app uses React to contact the Google Books API and render the user's search query to the page. This will dynamically display a list of books with their title, authors, thumbnail image, and description. The user will have the option to save a book. If saved, the book is sent to a MongoDB database. When the user navigates to the "saved" page, they will be able to view all of their books loaded via `express` and `mongoose.` The user may delete a book if they no longer wish to save it.
 
 🚀 Deployed at: https://all-my-books.herokuapp.com/
 
@@ -26,6 +26,7 @@ This app uses React to contact the Google Books API and render the user's search
 
 - React
 - React Router
+- Axios
 - MongoDB
 - Express
 - Mongoose
