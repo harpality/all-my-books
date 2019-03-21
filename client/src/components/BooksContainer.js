@@ -1,38 +1,39 @@
-import React, { Component } from "react";
-import SearchForm from "./SearchForm";
-import API from "../utils/API";
-import BookResults from "./BookResults";
-import Book from "./Book";
+import React, { Component } from 'react';
+import SearchForm from './SearchForm';
+import API from '../utils/API';
+import BookResults from './BookResults';
+import Book from './Book';
 
 // contains the logic for the search field and API calls for GET/POST
 
 class BooksContainer extends Component {
   state = {
     result: [],
-    search: "",
-    resultTitle: "Results"
+    search: '',
+    resultTitle: 'Results'
   };
-
-  componentDidUpdate() {
-    console.log(this.state.result);
-  }
 
   searchBooks = query => {
     API.search(query)
-      .then(res => this.setState({ result: res.data.items }))
+      .then(res =>
+        this.setState({
+          result: res.data.items,
+          search: '',
+          resultTitle: `Showing results for '${query}':`
+        })
+      )
       .catch(err => console.log(err));
-    this.setState({ search: "" });
   };
 
   saveBook = event => {
     event.preventDefault();
     const target = event.target.parentNode.parentNode;
     API.saveBook({
-      title: target.querySelector("h6").textContent,
-      authors: target.querySelector(".book-authors").textContent,
-      description: target.querySelector(".book-text").textContent,
-      image: target.querySelector("img").src,
-      link: target.querySelector("a").href,
+      title: target.querySelector('h6').textContent,
+      authors: target.querySelector('.book-authors').textContent,
+      description: target.querySelector('.book-text').textContent,
+      image: target.querySelector('img').src,
+      link: target.querySelector('a').href,
       saved: true
     }).then(res => console.log(res));
   };
@@ -73,8 +74,8 @@ class BooksContainer extends Component {
                 description={result.volumeInfo.description}
                 authors={
                   result.volumeInfo.authors
-                    ? result.volumeInfo.authors.map(author => author + ". ")
-                    : "Unknown"
+                    ? result.volumeInfo.authors.map(author => author + '. ')
+                    : 'Unknown'
                 }
                 saveBook={this.saveBook}
               />
