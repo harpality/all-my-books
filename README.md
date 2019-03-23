@@ -14,7 +14,7 @@ Please clone and download this folder to your hard disk. You will then navigate 
 
 You will then need to run your local `mongodb` server and include your API key in a `.env` file.
 
-To connect to the server, type `yarn start` or `npm start`. Open your favorite browser and visit `localhost:3000` in your browser to view the client side and `localhost:3001` to view server side.
+To connect to the server, type `yarn start` or `npm start`. Open your favorite browser and visit `localhost:3000` to view the client side and `localhost:3001` to view server side.
 
 ## Functionality
 
