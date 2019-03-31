@@ -12,6 +12,13 @@
   flex-direction: column;
 }
 
+.bookshelf {
+  background-image: url('images/bookshelf.png');
+  height: 40vh;
+  border-bottom: solid 2px black;
+  border-radius: 4px;
+}
+
 footer {
   background-color: #5a5c51;
   height: 5rem;
@@ -49,6 +56,10 @@ nav {
 .header {
   background-color: #1d2120;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  align-self: flex-end;
   flex-direction: column;
   text-align: center;
   margin-top: 2rem;

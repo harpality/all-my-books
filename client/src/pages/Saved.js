@@ -37,7 +37,6 @@ class Saved extends Component {
   render() {
     return (
       <div>
-        <Header />
         <BookResults title={this.state.resultTitle}>
           {this.state.result[0] ? (
             this.state.result.map(result => (
