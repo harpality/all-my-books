@@ -1,16 +1,33 @@
-import React, { Component } from 'react';
-import SearchForm from './SearchForm';
-import API from '../utils/API';
-import BookResults from './BookResults';
-import Book from './Book';
+import React, { Component } from "react";
+import SearchForm from "./SearchForm";
+import API from "../utils/API";
+import BookResults from "./BookResults";
+import Book from "./Book";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+import { css } from "glamor";
 
 // contains the logic for the search field and API calls for GET/POST
 
 class BooksContainer extends Component {
   state = {
     result: [],
-    search: '',
-    resultTitle: 'Results'
+    search: "",
+    resultTitle: "Results"
+  };
+
+  notify = () => {
+    toast("Book Saved!", {
+      position: toast.POSITION.TOP_CENTER,
+      className: css({
+        background: "#1d2120 !important",
+        fontFamily: "Inconsolata",
+        color: "#fff !important",
+        borderRadius: "0.5rem",
+        fontSize: "1.5rem",
+        textAlign: "center"
+      })
+    });
   };
 
   searchBooks = query => {
@@ -18,7 +35,7 @@ class BooksContainer extends Component {
       .then(res =>
         this.setState({
           result: res.data.items,
-          search: '',
+          search: "",
           resultTitle: `Showing results for '${query}':`
         })
       )
@@ -29,13 +46,14 @@ class BooksContainer extends Component {
     event.preventDefault();
     const target = event.target.parentNode.parentNode;
     API.saveBook({
-      title: target.querySelector('h6').textContent,
-      authors: target.querySelector('.book-authors').textContent,
-      description: target.querySelector('.book-text').textContent,
-      image: target.querySelector('img').src,
-      link: target.querySelector('a').href,
+      title: target.querySelector("h6").textContent,
+      authors: target.querySelector(".book-authors").textContent,
+      description: target.querySelector(".book-text").textContent,
+      image: target.querySelector("img").src,
+      link: target.querySelector("a").href,
       saved: true
     }).then(res => console.log(res));
+    this.notify();
   };
 
   handleInputChange = event => {
@@ -59,6 +77,8 @@ class BooksContainer extends Component {
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
+        <ToastContainer autoClose={2000} />
+
         <BookResults title={this.state.resultTitle}>
           {this.state.result ? (
             this.state.result.map(result => (
@@ -67,15 +87,13 @@ class BooksContainer extends Component {
                 title={result.volumeInfo.title}
                 link={result.volumeInfo.infoLink}
                 thumbnail={
-                  result.volumeInfo.imageLinks
-                    ? result.volumeInfo.imageLinks.thumbnail
-                    : null
+                  result.volumeInfo.imageLinks ? result.volumeInfo.imageLinks.thumbnail : null
                 }
                 description={result.volumeInfo.description}
                 authors={
                   result.volumeInfo.authors
-                    ? result.volumeInfo.authors.map(author => author + '. ')
-                    : 'Unknown'
+                    ? result.volumeInfo.authors.map(author => author + ". ")
+                    : "Unknown"
                 }
                 saveBook={this.saveBook}
               />
